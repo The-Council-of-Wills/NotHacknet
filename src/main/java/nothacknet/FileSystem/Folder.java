@@ -37,10 +37,11 @@ public class Folder implements FileSystemFolder {
         return false;
     }
 
-    public Folder getSubFolderByName(String name) {
-        for(FileSystemObject file : files) {
-            if (file instanceof Folder && file.getName().toLowerCase().equals(name.toLowerCase())) {
-                return (Folder) file;
+    @Override
+    public FileSystemObject getObjectByName(String fileName) {
+        for (FileSystemObject obj : getContents()) {
+            if (obj.getName().equals(fileName)) {
+                return obj;
             }
         }
         return null;

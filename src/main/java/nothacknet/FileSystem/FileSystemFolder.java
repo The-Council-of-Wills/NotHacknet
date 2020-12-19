@@ -8,4 +8,5 @@ public interface FileSystemFolder extends FileSystemObject {
     void addFolder(Folder folder);
     boolean contains(String fileName);
     String getFullFilepath();
+    FileSystemObject getObjectByName(String fileName);
 }

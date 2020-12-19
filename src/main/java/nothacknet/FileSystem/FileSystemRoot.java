@@ -49,6 +49,16 @@ public class FileSystemRoot implements FileSystemFolder {
     }
 
     @Override
+    public FileSystemObject getObjectByName(String fileName) {
+        for (FileSystemObject obj : getContents()) {
+            if (obj.getName().equals(fileName)) {
+                return obj;
+            }
+        }
+        return null;
+    }
+
+    @Override
     public String getName() {
         return "/";
     }

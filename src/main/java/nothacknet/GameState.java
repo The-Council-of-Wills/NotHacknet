@@ -2,7 +2,6 @@ package nothacknet;
 
 import nothacknet.FileSystem.FileSystemFolder;
 import nothacknet.FileSystem.FileSystemRoot;
-import nothacknet.FileSystem.Folder;
 
 public class GameState {
 

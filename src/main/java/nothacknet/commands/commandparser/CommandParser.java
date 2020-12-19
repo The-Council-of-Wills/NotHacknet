@@ -22,6 +22,7 @@ public class CommandParser {
     public static void parse(String toParse) {
         List<String> stringSplit = splitInput(toParse);
         if (!commands.containsKey(stringSplit.get(0))) {
+            System.out.println("Command not found");
             return;
         }
         commands.get(stringSplit.get(0)).execute(stringSplit);

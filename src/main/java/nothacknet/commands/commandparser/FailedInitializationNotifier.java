@@ -1,6 +1,6 @@
 package nothacknet.commands.commandparser;
 
-import nothacknet.commands.executables.Executable;
+import nothacknet.commands.executables.interfaces.Executable;
 
 import java.util.List;
 

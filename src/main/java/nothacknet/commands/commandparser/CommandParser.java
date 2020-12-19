@@ -1,7 +1,7 @@
 package nothacknet.commands.commandparser;
 
 import nothacknet.commands.executables.Append;
-import nothacknet.commands.executables.Executable;
+import nothacknet.commands.executables.interfaces.Executable;
 import nothacknet.commands.executables.ListDirectory;
 import nothacknet.commands.executables.MakeDirectory;
 

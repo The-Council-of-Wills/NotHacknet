@@ -1,7 +1,7 @@
 package nothacknet.commands.commandparser;
 
-import nothacknet.commands.executables.Executable;
-import nothacknet.commands.executables.Exec;
+import nothacknet.commands.executables.interfaces.Executable;
+import nothacknet.commands.executables.interfaces.Exec;
 import org.reflections.Reflections;
 import org.reflections.scanners.FieldAnnotationsScanner;
 import org.reflections.scanners.MethodParameterScanner;

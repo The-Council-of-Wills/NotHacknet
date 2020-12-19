@@ -3,6 +3,8 @@ package nothacknet.commands.executables;
 import nothacknet.FileSystem.FileSystemFolder;
 import nothacknet.FileSystem.Folder;
 import nothacknet.GameState;
+import nothacknet.commands.executables.interfaces.Exec;
+import nothacknet.commands.executables.interfaces.Executable;
 
 import java.util.List;
 

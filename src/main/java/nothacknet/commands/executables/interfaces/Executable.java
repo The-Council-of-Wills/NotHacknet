@@ -1,4 +1,4 @@
-package nothacknet.commands.executables;
+package nothacknet.commands.executables.interfaces;
 
 import java.util.List;
 

@@ -4,6 +4,8 @@ package nothacknet.commands.executables;
 import nothacknet.FileSystem.FileSystemFolder;
 import nothacknet.FileSystem.FileSystemObject;
 import nothacknet.GameState;
+import nothacknet.commands.executables.interfaces.Exec;
+import nothacknet.commands.executables.interfaces.Executable;
 
 import java.util.List;
 

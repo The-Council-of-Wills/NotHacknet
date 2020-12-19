@@ -1,4 +1,4 @@
-package nothacknet.commands.executables;
+package nothacknet.commands.executables.interfaces;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -2,11 +2,11 @@ package nothacknet.FileSystem;
 
 public class File implements FileSystemObject {
     private String fileName;
-    private Folder parent;
+    private FileSystemFolder parentFolder;
     private StringBuilder content;
 
-    public File(Folder parent, String fileName, String content) {
-        this.parent = parent;
+    public File(FileSystemFolder parent, String fileName, String content) {
+        this.parentFolder = parent;
         this.fileName = fileName;
         this.content = new StringBuilder(content);
     }

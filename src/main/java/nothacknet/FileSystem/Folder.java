@@ -1,4 +1,4 @@
-package FileSystem;
+package nothacknet.FileSystem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,17 @@ public class Folder implements FileSystemFolder {
         subFolders.add(folder);
     }
 
+    @Override
+    public boolean contains(String fileName) {
+        for (FileSystemObject obj : getContents()) {
+            if (obj.getName().equals(fileName)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public Folder getSubFolderByName(String name) {
         for(FileSystemObject file : files) {
             if (file instanceof Folder && file.getName().toLowerCase().equals(name.toLowerCase())) {
@@ -51,16 +62,16 @@ public class Folder implements FileSystemFolder {
     }
 
     @Override
-    public String getLocation() {
-        return parent.getLocation() + name + "/";
+    public String getFullFilepath() {
+        return parent.getFullFilepath() + name + "/";
     }
 
     @Override
     public String toString() {
         return "Folder{" +
                 "name='" + name + '\'' +
-                ", parent=" + parent.getLocation() +
-                ", location=" + getLocation() +
+                ", parent=" + parent.getFullFilepath() +
+                ", location=" + getFullFilepath() +
                 ", subFolders=" + subFolders +
                 ", files=" + files +
                 '}';

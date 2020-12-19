@@ -1,12 +1,12 @@
-package FileSystem;
+package nothacknet.FileSystem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileSystemRoot implements FileSystemFolder {
-    String location = "/";
-    List<Folder> subFolders = new ArrayList<>();
-    List<File> files = new ArrayList<>();
+    private final String location = "/";
+    private final List<Folder> subFolders = new ArrayList<>();
+    private final List<File> files = new ArrayList<>();
 
     public FileSystemRoot() {
 
@@ -29,12 +29,22 @@ public class FileSystemRoot implements FileSystemFolder {
     }
 
     @Override
+    public boolean contains(String fileName) {
+        for (FileSystemObject obj : getContents()) {
+            if (obj.getName().equals(fileName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
     public List<Folder> getSubFolders() {
         return subFolders;
     }
 
     @Override
-    public String getLocation() {
+    public String getFullFilepath() {
         return location;
     }
 

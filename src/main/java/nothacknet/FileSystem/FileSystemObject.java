@@ -1,4 +1,4 @@
-package FileSystem;
+package nothacknet.FileSystem;
 
 public interface FileSystemObject {
 

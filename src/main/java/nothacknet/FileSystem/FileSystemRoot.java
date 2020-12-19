@@ -3,7 +3,7 @@ package nothacknet.FileSystem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileSystemRoot implements FileSystemFolder{
+public class FileSystemRoot implements FileSystemFolder {
     private final String location = "/";
     private final List<Folder> subFolders = new ArrayList<>();
     private final List<File> files = new ArrayList<>();

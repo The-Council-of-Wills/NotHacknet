@@ -24,17 +24,17 @@ public class Append implements Executable {
         }
 
         StringBuilder toAppend = new StringBuilder();
+        for (int i = 1; i < args.size(); i++) {
+            toAppend.append(args.get(i));
+        }
 
         FileSystemObject file = GameState.getCurrentDirectory().getObjectByName(args.get(1));
         if (file instanceof File) {
-            for (int i = 2; i < args.size(); i++) {
-                toAppend.append(args.get(i));
-            }
+            append((File) file, toAppend.toString());
+        } else if (file == null) {
+            GameState.getCurrentDirectory().addFile(new File(GameState.getCurrentDirectory().getParent(), args.get(1), toAppend.toString()));
         } else {
             System.out.println("Specified file is a Folder");
-            return;
         }
-
-        append((File) file, toAppend.toString());
     }
 }

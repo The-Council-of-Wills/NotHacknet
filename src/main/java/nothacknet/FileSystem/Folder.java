@@ -27,6 +27,11 @@ public class Folder implements FileSystemFolder {
     }
 
     @Override
+    public void addFile(File file) {
+        files.add(file);
+    }
+
+    @Override
     public boolean contains(String fileName) {
         for (FileSystemObject obj : getContents()) {
             if (obj.getName().equals(fileName)) {
@@ -65,6 +70,11 @@ public class Folder implements FileSystemFolder {
     @Override
     public String getFullFilepath() {
         return parent.getFullFilepath() + name + "/";
+    }
+
+    @Override
+    public FileSystemFolder getParent() {
+        return parent;
     }
 
     @Override

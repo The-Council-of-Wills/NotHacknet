@@ -1,5 +1,6 @@
 package nothacknet.commands.commandparser;
 
+import nothacknet.commands.executables.Append;
 import nothacknet.commands.executables.Executable;
 import nothacknet.commands.executables.ListDirectory;
 import nothacknet.commands.executables.MakeDirectory;
@@ -15,6 +16,7 @@ public class CommandParser {
     public static void initialise() {
         commands.put("ls", new ListDirectory());
         commands.put("mkdir", new MakeDirectory());
+        commands.put("append", new Append());
     }
 
     public static void parse(String toParse) {

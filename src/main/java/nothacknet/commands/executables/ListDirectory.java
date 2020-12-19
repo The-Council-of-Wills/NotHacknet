@@ -19,7 +19,7 @@ public class ListDirectory implements Executable {
 
         for (FileSystemObject obj : GameState.getCurrentDirectory().getContents()) {
             if (obj instanceof FileSystemFolder) {
-                System.out.print("/" + obj.getName() + " ");
+                System.out.print(obj.getName() + "/ ");
             } else {
                 System.out.print(obj.getName());
             }

@@ -26,7 +26,7 @@ public class Append implements Executable {
         }
 
         StringBuilder toAppend = new StringBuilder();
-        for (int i = 1; i < args.size(); i++) {
+        for (int i = 2; i < args.size(); i++) {
             toAppend.append(args.get(i));
         }
 
